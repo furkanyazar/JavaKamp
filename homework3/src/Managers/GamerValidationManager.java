@@ -13,7 +13,7 @@ public class GamerValidationManager implements IGamerValidationService {
 		KPSPublicSoapProxy kpsPublicSoapProxy = new KPSPublicSoapProxy();
 
 		return kpsPublicSoapProxy.TCKimlikNoDogrula(Long.parseLong(gamer.getIdentityNumber()),
-				gamer.getFirstName(), gamer.getLastName(), gamer.getDateOfBirth().getYear());
+				gamer.getFirstName().toUpperCase(), gamer.getLastName().toUpperCase(), gamer.getDateOfBirth().getYear());
 	}
 
 }
